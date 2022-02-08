@@ -27,7 +27,7 @@ int CheckChargeRateOutOfRange(float chargeRate){
 
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  return (CheckTemperatureOutOfRange(temperature) && CheckSOCOutOfRange(soc) && CheckChargeRateOutOfRange(chargeRate));
+  return (!(CheckTemperatureOutOfRange(temperature) && CheckSOCOutOfRange(soc) && CheckChargeRateOutOfRange(chargeRate)));
 }
 
 int main() {
